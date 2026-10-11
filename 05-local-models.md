@@ -54,18 +54,27 @@ Now turn off Wi-Fi and run it again. It still works.
 | --- | --- |
 | `Can't reach Ollama` | Start the Ollama app, or run `ollama serve` in a terminal |
 | `Model not found (404)` | `ollama pull llama3.2` (or the name in your `.env`) |
-| `Ollama crashed ... (500)`, often mentioning CUDA | The graphics card driver doesn't get along with Ollama. Quit Ollama from its tray icon, then run it on the CPU only (below) |
+| `Ollama crashed ... (500)`, often mentioning CUDA | Usually an old NVIDIA driver. Update it, or run Ollama on the CPU only (below) |
 | Very slow answers | Normal on older laptops. Use the smallest model, or skip to Gemini |
 
-To run Ollama on the CPU only (Windows PowerShell):
+If Ollama crashes with a 500, the best fix is to update your graphics driver
+(<https://www.nvidia.com/drivers>), restart, and open the Ollama app again. The model
+then runs on the graphics card, which is fast.
 
-```powershell
-$env:CUDA_VISIBLE_DEVICES = "-1"
-ollama serve
-```
+If you can't update the driver, run Ollama on the CPU only. Opening the Ollama app
+starts it on the graphics card again, so don't use the app for this:
 
-Leave that terminal open and use another one for the scripts. On macOS this problem
-doesn't come up.
+1. Quit the app: right-click the llama icon in the system tray (bottom right, near the
+   clock) and choose Quit Ollama.
+2. In PowerShell, run this and leave the window open:
+
+   ```powershell
+   $env:CUDA_VISIBLE_DEVICES = "-1"; ollama serve
+   ```
+
+3. Use a second terminal for the kit's scripts.
+
+The setting lasts only while that window is open. On macOS this problem doesn't come up.
 
 If your laptop can't run a local model at all, that's fine. Skip ahead: Gemini and
 OpenRouter cover everything in the next steps.

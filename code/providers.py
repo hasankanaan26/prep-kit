@@ -119,9 +119,11 @@ def explain_error(provider: str, err: Exception) -> str:
     if kind == "APIConnectionError" and provider == "ollama":
         return "Can't reach Ollama. Is it running? Open the Ollama app, or run: ollama serve"
     if kind == "InternalServerError" and provider == "ollama":
-        return ("Ollama crashed while loading the model (500). This is usually the graphics card "
-                "driver. Quit Ollama, then start it on the CPU only: in PowerShell "
-                "$env:CUDA_VISIBLE_DEVICES='-1'; ollama serve  (see module 05).")
+        return ("Ollama crashed while loading the model (500). This is usually an old graphics "
+                "card driver. Either update the driver and restart, or run on the CPU only: "
+                "quit the Ollama app (tray icon > Quit Ollama; opening the app brings the crash "
+                "back), then in PowerShell run  $env:CUDA_VISIBLE_DEVICES='-1'; ollama serve  "
+                "and leave that window open (see step 05).")
     if kind == "APIConnectionError":
         return "Can't reach the provider. Check your internet connection (or a VPN/proxy)."
     if kind == "AuthenticationError" or "401" in text:
