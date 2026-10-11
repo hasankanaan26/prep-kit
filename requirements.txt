@@ -1,0 +1,8 @@
+# The prep kit's small install: a minute or two. (The full course install is in module 08.)
+openai>=2.45,<3
+httpx
+python-dotenv
+tiktoken
+fastapi       # to run the mock order API in step 02
+uvicorn
+pytest
