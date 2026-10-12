@@ -74,7 +74,7 @@ It sends five requests and prints each one with its status code:
    "this one refund" that the caller chooses.
 4. Send the exact same refund again, as a retry after a timeout would. You get the same
    `refund_id` back, so the customer is refunded once, not twice. That property is called
-   idempotency, and Session 6 is built on it.
+   idempotency, and Session 5 is built on it.
 5. Ask the server to fail on purpose with the `X-Chaos: error` header: 500. Real APIs fail,
    and the course makes them fail on purpose so you can practise handling it.
 

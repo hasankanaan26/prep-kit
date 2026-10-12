@@ -188,7 +188,7 @@ Packages the prep kit needs:
     <div class="card bad"><h4>500 Server error</h4><p>Something broke on my side, not yours.</p></div>
   </div>
   <div class="callout plain"><p>A 404 is not a crash. The server answered fine; it's telling you something. Good code reads the status and decides what to do.</p></div>
-  <aside class="notes">Four codes are enough for this month. 429 matters because free tiers on Gemini and OpenRouter rate-limit you: the fix is to wait, not to hammer it. 500 matters because real APIs fail, and the course makes them fail on purpose (the X-Chaos header on the mock API) so they can practise handling it in Session 6.</aside>
+  <aside class="notes">Four codes are enough for this month. 429 matters because free tiers on Gemini and OpenRouter rate-limit you: the fix is to wait, not to hammer it. 500 matters because real APIs fail, and the course makes them fail on purpose (the X-Chaos header on the mock API) so they can practise handling it in Session 5.</aside>
 </section>
 
 <!-- 11 ─ lab: the mock API -->
@@ -218,7 +218,7 @@ POST http://localhost:9000/refunds        <span class="comment">Idempotency-Key:
 -> status 200 OK      {"refund_id": "<span class="hl">R-26762c6f</span>", "amount_usd": 79.99}</code></pre>
   <div class="callout analogy"><p>A receipt number on a bank transfer. Hand the clerk the same slip twice and you pay once, because they've already seen that number.</p></div>
   <p class="small">The caller picks a unique key for "this one refund". A retry after a timeout reuses it, so the customer is refunded <strong>once</strong>. That's called <strong>idempotency</strong>.</p>
-  <aside class="notes">This is the one API idea worth naming today, because money is involved. Networks time out. If a refund request times out, you don't know if it happened, so you retry. Without a key, a retry can refund twice. With the key, the server recognises the request and returns the first refund. Session 6 builds the real refund tool on this. Don't go deeper today; the name and the picture are enough.</aside>
+  <aside class="notes">This is the one API idea worth naming today, because money is involved. Networks time out. If a refund request times out, you don't know if it happened, so you retry. Without a key, a retry can refund twice. With the key, the server recognises the request and returns the first refund. Session 5 builds the real refund tool on this. Don't go deeper today; the name and the picture are enough.</aside>
 </section>
 
 <!-- 13 ─ quick check 1 -->
@@ -582,7 +582,7 @@ Ready for Day 1. See you on Monday.</code></pre>
     <li><code>git pull</code> the morning of Session 1</li>
   </ol>
   <p class="small">Stuck on the last check? Come 20 minutes early on Monday with its output. We'll fix it together.</p>
-  <aside class="notes">Leave this up at the end of the call. The order matters less than the last two items. Anything they don't finish today, they can finish this weekend from the step pages. You won't need Docker. If they already use an AI coding assistant, they should bring it; if not, they wait, because Session 3 sets one up together.</aside>
+  <aside class="notes">Leave this up at the end of the call. The order matters less than the last two items. Anything they don't finish today, they can finish this weekend from the step pages. You won't need Docker. If they already use an AI coding assistant, they should bring it; if not, they install a free one before Session 3 (step 08 of the kit says how), because that session's lab needs it from the first minute.</aside>
 </section>
 
 <!-- 32 ─ close -->

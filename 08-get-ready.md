@@ -132,11 +132,13 @@ Ready for Day 1. See you on Monday.
 usual one is "This is the prep kit's venv": run `deactivate`, activate the course venv,
 and try again.
 
-## Optional: an AI coding assistant
+## Before Session 3: an AI coding assistant
 
-Sessions 3 and 4 are about working with an AI coding assistant. If you already use one
-(Cursor, Claude Code, GitHub Copilot or similar), bring it. If not, don't set one up yet.
-We'll do it together in Session 3.
+Session 3 is about working with an AI coding assistant, and its lab starts with one open
+on the course code. If you already use one (Cursor, Claude Code, GitHub Copilot or
+similar), bring it. If not, install one before that Friday: a free tier is enough, for
+example GitHub Copilot Free in VS Code. Check that it can open a folder and answer a
+question about a file in it. No assistant on the day? You'll pair with someone who has one.
 
 You won't need Docker for this course.
 
