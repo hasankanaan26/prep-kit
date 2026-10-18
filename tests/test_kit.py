@@ -145,7 +145,7 @@ def test_python_versions():
 
 
 def test_venv_detection(tmp_path):
-    repo = tmp_path / "resolvo-workshop"
+    repo = tmp_path / "deskhand-workshop"
     assert cs.check_venv(repo, str(repo / ".venv"), "/usr").status == cs.PASS
     assert cs.check_venv(repo, "/usr", "/usr").status == cs.FAIL
     # the kit's own venv is the classic mix-up in step 08
@@ -161,12 +161,12 @@ def make_fake_repo(path):
 
 
 def test_find_repo_from_inside_it(tmp_path):
-    repo = make_fake_repo(tmp_path / "resolvo-workshop")
+    repo = make_fake_repo(tmp_path / "deskhand-workshop")
     assert cs.find_repo(cwd=repo) == repo.resolve()
 
 
 def test_find_repo_one_level_up(tmp_path):
-    repo = make_fake_repo(tmp_path / "resolvo-workshop")
+    repo = make_fake_repo(tmp_path / "deskhand-workshop")
     assert cs.find_repo(cwd=tmp_path) == repo.resolve()
 
 

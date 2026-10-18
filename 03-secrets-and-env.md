@@ -55,7 +55,7 @@ value. Your keys are all "not set" for now. Step 04 fills them in.
 - One key per project, so you can revoke one without breaking the others.
 
 There are two `.env` files in this course. `prep-kit/.env` holds your free practice keys.
-The course folder's `.env` (`resolvo-workshop/.env`) holds the course key, and you fill it
+The course folder's `.env` (`deskhand-workshop/.env`) holds the course key, and you fill it
 in during step 08. They're kept apart on purpose.
 
 Next: [04 Your first LLM call](04-first-llm-call.md)

@@ -90,7 +90,7 @@
       <text x="175" y="166" font-size="17" fill="#eef6f3">project B wants openai 1.x</text>
       <text x="175" y="200" font-size="16" fill="#9db5b1">one of them breaks</text>
       <rect x="400" y="20" width="330" height="200" rx="12" fill="#0d3029" stroke="#01d294"/>
-      <text x="565" y="58" font-size="20" fill="#01d294">resolvo-workshop/.venv</text>
+      <text x="565" y="58" font-size="20" fill="#01d294">deskhand-workshop/.venv</text>
       <text x="565" y="100" font-size="17" fill="#eef6f3">its own Python 3.12</text>
       <text x="565" y="136" font-size="17" fill="#eef6f3">openai 2.x</text>
       <text x="565" y="166" font-size="17" fill="#eef6f3">langchain, fastapi …</text>
@@ -262,7 +262,7 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
     <li>Leaked a key? Revoke it in the provider's dashboard and make a new one. It takes a minute.</li>
     <li>One key per project, so you can revoke one without breaking the others.</li>
   </ol>
-  <div class="callout info"><p>Two <code>.env</code> files, on purpose: <code>prep-kit/.env</code> for free practice keys, <code>resolvo-workshop/.env</code> for the course key.</p></div>
+  <div class="callout info"><p>Two <code>.env</code> files, on purpose: <code>prep-kit/.env</code> for free practice keys, <code>deskhand-workshop/.env</code> for the course key.</p></div>
   <aside class="notes">The spending limit is the one to stress. A loop with a bug can make thousands of calls while you're at lunch; a limit turns that into an annoyance instead of a bill. And revoking is not a big deal: people leak keys all the time, and the fix is boring and fast. The two .env files keep practice and course separate, so nothing in the prep kit can change how the course code behaves.</aside>
 </section>
 
@@ -552,14 +552,14 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
 <section class="slide">
   <h2><span class="kicker">Step 08</span>Get the code, install, fill in, check</h2>
 <pre><code><span class="comment"># from the folder that holds prep-kit</span>
-git clone https://github.com/hasankanaan26/resolvo-workshop.git
-cd resolvo-workshop
+git clone https://github.com/hasankanaan26/deskhand-workshop.git
+cd deskhand-workshop
 deactivate; py -3.12 -m venv .venv; .venv\Scripts\activate   <span class="comment"># the course's own venv</span>
 pip install -r requirements.txt     <span class="comment"># the full course list: 10 to 20 minutes</span>
 copy .env.example .env              <span class="comment"># then set LLM_PROVIDER=openai and OPENAI_API_KEY=</span>
 python ..\prep-kit\code\check_setup.py --live
 
-[ ok ] Course repo found: C:\...\resolvo-workshop
+[ ok ] Course repo found: C:\...\deskhand-workshop
 [ ok ] The course's virtual environment is active
 [ ok ] Course provider: openai (key filled in)
 [ ok ] Live call to openai (gpt-4o-mini) answered: 'ready'
@@ -576,7 +576,7 @@ Ready for Day 1. See you on Monday.</code></pre>
     <li>Saw a 404 and a 500 from <code>hello_api.py</code></li>
     <li>One LLM call with <code>chat.py</code></li>
     <li>Paid course key with a spending limit</li>
-    <li><code>resolvo-workshop/.env</code> filled in</li>
+    <li><code>deskhand-workshop/.env</code> filled in</li>
     <li>Full course install finished</li>
     <li><code>check_setup.py --live</code> says Ready</li>
     <li><code>git pull</code> the morning of Session 1</li>

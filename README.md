@@ -70,8 +70,8 @@ Tick these off before Monday:
 - [ ] You made at least one LLM call with `code\chat.py` (Gemini, OpenRouter or Ollama)
 - [ ] You have a paid course key (OpenAI recommended) with a spending limit set
 - [ ] The course code is cloned next to the kit, with its own `.venv`
-- [ ] `resolvo-workshop/.env` is filled in, and the full course install finished
-- [ ] From `resolvo-workshop/`, `python ..\prep-kit\code\check_setup.py --live` ends with
+- [ ] `deskhand-workshop/.env` is filled in, and the full course install finished
+- [ ] From `deskhand-workshop/`, `python ..\prep-kit\code\check_setup.py --live` ends with
       "Ready for Day 1"
 
 If the last line fails and you can't fix it, bring your laptop 20 minutes early on Monday

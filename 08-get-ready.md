@@ -40,8 +40,8 @@ Then, from the folder that holds `prep-kit` (your `projects` folder from step 01
 
 ```powershell
 cd ..                       # if you're still inside prep-kit
-git clone https://github.com/hasankanaan26/resolvo-workshop.git
-cd resolvo-workshop
+git clone https://github.com/hasankanaan26/deskhand-workshop.git
+cd deskhand-workshop
 git status
 ```
 
@@ -50,12 +50,12 @@ You now have two folders side by side:
 ```
 projects/
   prep-kit/            this kit
-  resolvo-workshop/    the course
+  deskhand-workshop/    the course
 ```
 
 ## A second toolbox, for the course
 
-The course gets its own virtual environment, inside `resolvo-workshop/`. Leave the kit's
+The course gets its own virtual environment, inside `deskhand-workshop/`. Leave the kit's
 venv first, then make and activate the new one:
 
 ```powershell
@@ -68,7 +68,7 @@ From now on, "activate the venv" for the course means this one.
 
 ## Install everything
 
-With the course venv active, from `resolvo-workshop/`:
+With the course venv active, from `deskhand-workshop/`:
 
 ```powershell
 pip install -r requirements.txt
@@ -80,7 +80,7 @@ You only do this once.
 
 ## Fill in the course .env
 
-Also from `resolvo-workshop/`:
+Also from `deskhand-workshop/`:
 
 ```powershell
 copy .env.example .env      # macOS/Linux: cp .env.example .env
@@ -103,7 +103,7 @@ model, not the model's own name. That mix-up is the most common Azure error (404
 
 ## Run the setup check
 
-Still in `resolvo-workshop/`, with the course venv active, run the kit's check:
+Still in `deskhand-workshop/`, with the course venv active, run the kit's check:
 
 ```powershell
 python ..\prep-kit\code\check_setup.py      # macOS/Linux: python ../prep-kit/code/check_setup.py
@@ -111,7 +111,7 @@ python ..\prep-kit\code\check_setup.py      # macOS/Linux: python ../prep-kit/co
 
 If you put the kit somewhere else, use its path instead of `..\prep-kit`. The check finds
 the course folder because you're standing in it. (You can also point at it with
-`--repo C:\path\to\resolvo-workshop`.)
+`--repo C:\path\to\deskhand-workshop`.)
 
 It checks the course folder, your Python, the course venv, git, both package lists, your
 course `.env` (it looks at which settings are filled in, never at the values), your
@@ -144,9 +144,9 @@ You won't need Docker for this course.
 
 ## Before Monday
 
-- `git pull` in `resolvo-workshop/` to get the latest code.
-- Run `check_setup.py --live` once more, from `resolvo-workshop/`.
-- In `resolvo-workshop/`, skim `checkpoints/00-broken-bot/README.md`. Session 1 starts by
+- `git pull` in `deskhand-workshop/` to get the latest code.
+- Run `check_setup.py --live` once more, from `deskhand-workshop/`.
+- In `deskhand-workshop/`, skim `checkpoints/00-broken-bot/README.md`. Session 1 starts by
   breaking that bot.
 
 See you on Monday.

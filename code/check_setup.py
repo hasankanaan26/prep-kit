@@ -1,6 +1,6 @@
 """Module 08: the setup doctor. Run it the night before Session 1.
 
-From your course folder (resolvo-workshop/), with the course venv active:
+From your course folder (deskhand-workshop/), with the course venv active:
 
     python ..\\prep-kit\\code\\check_setup.py           checks everything, costs nothing
     python ..\\prep-kit\\code\\check_setup.py --live    also one tiny paid call (< $0.001)
@@ -24,7 +24,7 @@ from dotenv import dotenv_values
 from providers import KIT_DIR, PROVIDERS, is_configured
 
 PASS, WARN, FAIL = "PASS", "WARN", "FAIL"
-REPO_NAME = "resolvo-workshop"
+REPO_NAME = "deskhand-workshop"
 ACTIVATE = r".venv\Scripts\activate  (macOS/Linux: source .venv/bin/activate)"
 
 
