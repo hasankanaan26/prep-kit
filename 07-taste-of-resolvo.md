@@ -1,6 +1,6 @@
 # 07 A taste of Resolvo
 
-About 20 minutes. This is a small version of the first thing you'll build: read a support
+About 20 minutes. This is a small version of the first thing Resolvo learns to do in class: read a support
 ticket and sort it, so the right thing can happen next.
 
 ## The job

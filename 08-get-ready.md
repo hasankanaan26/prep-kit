@@ -22,7 +22,7 @@ built and tested against the three providers above, and the later sessions use f
 
 1. Sign up at <https://platform.openai.com>.
 2. Billing: add prepaid credit. $10 is plenty: on the default small model (`gpt-4o-mini`)
-   a typical lab run costs cents. The slides warn you before anything costs more.
+   an evening's "try this tonight" costs cents. The slides warn you before anything costs more.
 3. Limits: set a monthly budget, so a bug in a loop can't run up a bill.
 4. API keys: create a key named `resolvo` and copy it. You only see it once.
 
@@ -134,11 +134,11 @@ and try again.
 
 ## Before Session 3: an AI coding assistant
 
-Session 3 is about working with an AI coding assistant, and its lab starts with one open
-on the course code. If you already use one (Cursor, Claude Code, GitHub Copilot or
-similar), bring it. If not, install one before that Friday: a free tier is enough, for
-example GitHub Copilot Free in VS Code. Check that it can open a folder and answer a
-question about a file in it. No assistant on the day? You'll pair with someone who has one.
+Session 3 is about working with an AI coding assistant. In class you watch one used on
+the course code; that evening you repeat it with your own. If you already use one (Cursor,
+Claude Code, GitHub Copilot or similar), that's the one. If not, install one before that
+Friday: a free tier is enough, for example GitHub Copilot Free in VS Code. Check that it can
+open a folder and answer a question about a file in it.
 
 You won't need Docker for this course.
 

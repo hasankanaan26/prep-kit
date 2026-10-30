@@ -15,12 +15,15 @@
   <h1>Before Day One</h1>
   <p class="subtitle">A gentle first touch of everything you'll use: the terminal, a virtual environment, APIs, keys, and your first calls to a language model</p>
   <p class="session-meta">Session 0 · Prep kit · Optional kickoff call, the weekend before October 19, 2026</p>
-  <aside class="notes">Welcome everyone. Say up front: this is optional, nothing is graded, and nobody is expected to master any of it before Monday. The goal is that on day one nothing on the screen is completely new. The kit is a folder called prep-kit that works on its own, eight short steps, about three to four hours if they do it alone. Today we walk through it together and get as many laptops working as we can.</aside>
+  <aside class="notes">
+    <p>Welcome. Today is optional and nothing is graded. The whole goal is simple: on Monday, nothing on the screen should be completely new to you. Nobody needs to master any of this before then. We'll walk through the kit together and get as many laptops working as we can.</p>
+    <p><i>[If asked: the kit is a folder called <code>prep-kit</code>: eight short steps, three to four hours alone.]</i></p>
+  </aside>
 </section>
 
 <!-- 2 ─ what this is -->
 <section class="slide">
-  <h2><span class="kicker">Today</span>What this is, and what it isn't</h2>
+  <h2><span class="kicker">Today</span>A first touch, not a test</h2>
   <ul>
     <li>A <strong>first touch</strong> of the tools the course uses, so Monday doesn't start with a wall of new words.</li>
     <li>A working laptop: Python, the course code, and an <strong>API key</strong> that works.</li>
@@ -28,21 +31,30 @@
   </ul>
   <div class="callout plain"><p>An <strong>API key</strong> is a long password that lets your code use a paid service. We'll see where it goes in a few minutes.</p></div>
   <p class="small muted">Everything here is in the kit, <code>github.com/hasankanaan26/prep-kit</code>, one short Markdown page per step.</p>
-  <aside class="notes">Set the tone: relaxed. Many of them already know half of this (most developers have used a terminal and an API), and that's fine; tell those people to go straight to steps 04, 05 and 08. The one thing that must be done before Monday is step 08: a paid course key and the full install, because that install takes 10 to 20 minutes and we don't want to spend class time on it.</aside>
+  <aside class="notes">
+    <p>Here's the deal for today. The course uses a handful of tools: a terminal, a virtual environment, APIs, and API keys. This session is a first touch of each one, so Monday doesn't start with a wall of new words. If you already use a terminal and APIs every day, go straight to steps 04, 05 and 08.</p>
+    <p>And this isn't a test. If a step doesn't work, write down what you saw and move on. The only step that must be done before Monday is step 08: a paid course key, and the full install. We don't want to spend class time on installing.</p>
+    <p><i>[If asked: the install takes 10 to 20 minutes, which is why it has to happen before Monday.]</i></p>
+  </aside>
 </section>
 
 <!-- 3 ─ the story -->
 <section class="slide">
-  <h2><span class="kicker">The story</span>What you'll build in four weeks</h2>
+  <h2><span class="kicker">The story</span>What the four weeks look like</h2>
   <ul>
     <li><strong>Nimbus Electronics</strong> is a small online store. Customers send support tickets.</li>
-    <li><strong>Resolvo</strong> reads each ticket, works out what the customer needs, checks the order and the store's policies, and drafts the fix.</li>
-    <li>The first version, which you inherit on Monday, is broken in 10 ways. You fix one at a time.</li>
+    <li><strong>Deskhand</strong> reads each ticket, checks the order and the store's policies, and drafts the fix.</li>
+    <li>The first version is broken in 10 ways. Each session fixes one or two, live on the screen.</li>
   </ul>
   <div class="callout example" data-label="A real ticket: T-1001">
     <p>"I ordered the wireless headphones two weeks ago, order #48291. They arrived with a cracked case. I want a refund or a replacement…"</p>
   </div>
-  <aside class="notes">Keep this short; Session 1 tells the story properly. The point is that every tool today shows up again in that story. The kit's data/tickets.json holds the same 60 tickets they'll use all month, so T-1001 will feel familiar on Monday.</aside>
+  <aside class="notes">
+    <p>Here's the story the whole month hangs on. Nimbus Electronics is a small online store, and customers send it support tickets. Deskhand is the bot we're building: it reads each ticket, checks the order and the store's policies, and drafts the fix. The first version is broken in ten ways, and each session fixes one or two.</p>
+    <p>In class I drive and you steer: you pick the tickets, call the predictions, and vote on whether a refund goes out. Every session ends with a one-page list of things to try that evening, and today's setup is what makes that possible. You'll meet this ticket again on Monday.</p>
+    <p><i>[Do: keep this short; Session 1 tells the story properly.]</i></p>
+    <p><i>[If asked: the kit's <code>data/tickets.json</code> holds the same 60 tickets they'll use all month, so T-1001 will feel familiar.]</i></p>
+  </aside>
 </section>
 
 <!-- 4 ─ the route -->
@@ -59,7 +71,12 @@
     <tr><td>07 A taste of Resolvo</td><td>Ask a model to sort real tickets</td><td>20 min</td></tr>
     <tr><td><strong>08 Get ready</strong></td><td><strong>Course key, course code, install, setup check</strong></td><td>50 min</td></tr>
   </table>
-  <aside class="notes">This is the map. Point at step 08 in bold: that's the must-do. Steps 04 and 05 are partly alternatives: a laptop that can't run a local model can skip 05, and someone who can't sign up for Google can use OpenRouter or Ollama instead. Each step page ends with a "Try this" list and an "If something went wrong" table.</aside>
+  <p class="small muted">The kit still calls Deskhand by its earlier name, Resolvo, in a few places. Same bot.</p>
+  <aside class="notes">
+    <p>This is the route: eight steps, just under four hours if you do them alone. Step 08 is the must-do. The rest can wait for the weekend. Steps 04 and 05 overlap: both give you a first call to a language model, one in the cloud and one on your own laptop. If your laptop can't run a local model, skip 05. If you can't sign up for Google, use OpenRouter or Ollama instead. Each step is one short Markdown page, so none of this is heavy reading.</p>
+    <p><i>[Watch out: the kit still says Resolvo, the bot's earlier name, in step 07 (<code>07-taste-of-resolvo.md</code>, <code>code\taste_of_resolvo.py</code>), in step 08's key name and in its README. It's the same bot as Deskhand.]</i></p>
+    <p><i>[If asked: each step page ends with a "Try this" list and an "If something went wrong" table.]</i></p>
+  </aside>
 </section>
 
 <!-- 5 ─ terminal -->
@@ -74,7 +91,11 @@
     <tr><td>Clear the screen</td><td><code>cls</code></td><td><code>clear</code></td></tr>
   </table>
   <div class="callout watch"><p>The folder you're in matters. Running a script from the wrong folder is the most common first-week mistake, and some scripts fail <em>silently</em> when you do it.</p></div>
-  <aside class="notes">A terminal is a window where you type commands instead of clicking. On Windows that's PowerShell, and in VS Code Ctrl+backtick opens one inside the editor. Demo pwd, ls and cd live. The silent failure is real: Session 1's broken bot loads its policy files by relative path, so run from the repo root and it quietly answers without any policies. Tell them to look at where they are before running anything.</aside>
+  <aside class="notes">
+    <p>Five commands are all you need for the whole course. <code>pwd</code> tells you where you are, <code>ls</code> shows what's in the folder, <code>cd</code> moves you around. The one habit I want you to build is this: check which folder you're in before you run anything. Running a script from the wrong folder is the most common first-week mistake, and the nasty part is that some scripts don't complain. They just do the wrong thing quietly. That's why the red box is on the slide.</p>
+    <p><i>[Do: demo <code>pwd</code>, <code>ls</code> and <code>cd</code> live. In VS Code, Ctrl+backtick opens a terminal.]</i></p>
+    <p><i>[If asked: the silent failure is real. Session 1's broken bot finds its policy files by relative path. Run it from the repo root and it answers without any policies, and no error.]</i></p>
+  </aside>
 </section>
 
 <!-- 6 ─ venv idea -->
@@ -103,12 +124,17 @@
     </g>
   </svg>
   </div>
-  <aside class="notes">Packages are other people's code that your project uses, like openai or httpx. If everything goes into the one Python on your computer, projects fight over versions. A venv is a folder with its own private Python and its own packages. The analogy: a separate toolbox per job. The best property for beginners: it's disposable. If the venv gets into a bad state, delete the .venv folder and make it again. Nothing else is lost.</aside>
+  <div class="callout plain"><p>A <strong>virtual environment</strong> (venv) is a folder with its own Python and its own packages, one per project.</p></div>
+  <aside class="notes">
+    <p>A quick word on packages first. Packages are other people's code, like <code>openai</code> or <code>httpx</code>, that you install and then import. Now look at the left box. If you install everything into the one Python on your computer, every project shares one shelf. Project A wants openai 2, project B wants openai 1, and one of them breaks.</p>
+    <p>A virtual environment, a venv, fixes that. It's a private copy of Python with its own shelf of packages, one per project. Think of it as a separate toolbox for each job. And because it's just a folder, there's nothing precious about it.</p>
+    <p><i>[Watch out: venv in a bad state? Delete the <code>.venv</code> folder and make it again. Nothing else is lost.]</i></p>
+  </aside>
 </section>
 
 <!-- 7 ─ venv commands -->
 <section class="slide">
-  <h2><span class="kicker">Step 01</span>Make it, switch it on, fill it</h2>
+  <h2><span class="kicker">Step 01</span>Make a venv, switch it on, install packages</h2>
   <div class="cols">
     <div>
       <h3>Windows</h3>
@@ -127,7 +153,12 @@ pip install -r requirements.txt</code></pre>
   </div>
   <p>Your prompt now starts with <code>(.venv)</code>. Activate again in every new terminal.</p>
   <div class="callout info"><p>PowerShell says "running scripts is disabled"? Run this once: <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code></p></div>
-  <aside class="notes">Three ideas: venv creates the folder, activate switches this terminal over to it, pip installs packages into it from a shopping list called requirements.txt. On Windows we use py, the Python launcher, because plain python often isn't on the PATH. The prep kit's list is small and takes a minute or two. The course gets its own venv and a much bigger list in step 08: one toolbox per project, which is the point of the previous slide.</aside>
+  <aside class="notes">
+    <p>Three commands, three different jobs. The first, <code>venv</code>, makes the folder. The second, <code>activate</code>, switches this terminal over to it, which is why your prompt starts showing <code>(.venv)</code>. The third, <code>pip install</code>, fills it from a shopping list, the file <code>requirements.txt</code>.</p>
+    <p>One thing catches everyone: activating only applies to the terminal you're in. Open a new terminal and you have to activate again. On Windows we type <code>py</code> rather than <code>python</code>. That's the Python launcher, and we use it because plain <code>python</code> often isn't on the PATH.</p>
+    <p><i>[Watch out: PowerShell says "running scripts is disabled"? The fix is on the slide, and you run it once.]</i></p>
+    <p><i>[If asked: the course gets its own venv and a much bigger list in step 08.]</i></p>
+  </aside>
 </section>
 
 <!-- 8 ─ lab: where am i -->
@@ -145,7 +176,11 @@ Packages the prep kit needs:
   ok       dotenv
   ok       tiktoken</code></pre>
   <p>Now open a second terminal, <strong>don't</strong> activate, and run it again. Different Python, missing packages. That difference is the whole point.</p>
-  <aside class="notes">If they're following along, give them three minutes. The second run without activating is the moment it clicks: same command, different Python. If pip installed packages but the script says MISSING, the venv wasn't active when they ran pip; activate and install again.</aside>
+  <p class="small muted">macOS / Linux, with the venv active: <code>python code/where_am_i.py</code>. The same goes for every <code>py code\…</code> command in this deck.</p>
+  <aside class="notes">
+    <p>Here's the first thing to try. Run <code>where_am_i.py</code> and it tells you which Python is running, whether a venv is active, and whether the four packages the kit needs are installed. Then do the part that makes it click: open a second terminal, don't activate, and run the same command. You get a different Python and missing packages. Same command, different Python, and the only difference is one <code>activate</code>. If you're following along, take three minutes now.</p>
+    <p><i>[Watch out: pip installed the packages but the script says MISSING? The venv wasn't active when they ran pip. Activate and install again.]</i></p>
+  </aside>
 </section>
 
 <!-- 9 ─ what an API is -->
@@ -175,7 +210,10 @@ Packages the prep kit needs:
   </svg>
   </div>
   <p class="small"><code>GET</code> reads something. <code>POST</code> creates or changes something. <strong>JSON</strong> is text that looks like a Python dict.</p>
-  <aside class="notes">An API is a menu another program offers you. You send a request, you get a response. Every request has a method (GET to read, POST to change), a URL, headers (notes on the envelope, like your key), and sometimes a JSON body. Every response has a status code and usually JSON. A call to a language model is exactly this shape: a POST with JSON in and JSON out. That's why we spend half an hour here.</aside>
+  <aside class="notes">
+    <p>An API is a menu another program offers you. Here's the whole shape of a call. Your code, on the left, sends a request: a method like GET, a URL, some headers, and for a POST a JSON body. The order API on the right sends back a response: a status code and some JSON. Headers are the notes on the envelope, and later that's where the API key, the password for the service, travels.</p>
+    <p>The reason we spend time on this today is that a call to a language model has exactly this shape. It's a POST, JSON in, JSON out. Nothing magic about the transport.</p>
+  </aside>
 </section>
 
 <!-- 10 ─ status codes -->
@@ -188,7 +226,11 @@ Packages the prep kit needs:
     <div class="card bad"><h4>500 Server error</h4><p>Something broke on my side, not yours.</p></div>
   </div>
   <div class="callout plain"><p>A 404 is not a crash. The server answered fine; it's telling you something. Good code reads the status and decides what to do.</p></div>
-  <aside class="notes">Four codes are enough for this month. 429 matters because free tiers on Gemini and OpenRouter rate-limit you: the fix is to wait, not to hammer it. 500 matters because real APIs fail, and the course makes them fail on purpose (the X-Chaos header on the mock API) so they can practise handling it in Session 5.</aside>
+  <aside class="notes">
+    <p>Four status codes, and you'll see all four this month. 200 means here's what you asked for. 404 means I understood you, but that thing doesn't exist. That's not a crash: the server answered perfectly well, it's telling you something. 429 means slow down, and you'll meet it on the free LLM tiers; the right move is to wait, not to hammer it. 500 means the other side broke, not you.</p>
+    <p>Real APIs do break, and the course makes its APIs fail on purpose so you get to practise handling it. Good code reads the status and decides what to do.</p>
+    <p><i>[If asked: the mock API fails on demand: an <code>X-Chaos</code> header for one request, or <code>MOCK_CHAOS</code> for all. Session 5 uses <code>MOCK_CHAOS</code>.]</i></p>
+  </aside>
 </section>
 
 <!-- 11 ─ lab: the mock API -->
@@ -203,33 +245,45 @@ py code\hello_api.py</code></pre>
     <li>Open <code>http://localhost:9000/docs</code>: every endpoint, with a "Try it out" button.</li>
     <li><code>hello_api.py</code> sends five requests: an order, a missing order (404), a refund, the same refund again, and a forced failure (500).</li>
   </ol>
-  <aside class="notes">This is a small fake version of the Nimbus order system, and the course uses it in every week. The docs page is generated from the code, and it's the friendliest way to see an API: click GET /orders/{order_id}, Try it out, O-48291, Execute. Then run hello_api.py and read the output top to bottom. The script is about 60 lines and worth reading: each request is one line of httpx.</aside>
+  <aside class="notes">
+    <p>Now a real API, running on your laptop. The first command starts a small fake Nimbus order system, the same one the course uses every week. Leave it running. Open <code>localhost:9000/docs</code> in a browser and you get every endpoint with a "Try it out" button. That's the gentlest first API call there is, and the response panel shows the status code and the JSON together.</p>
+    <p>Then run <code>hello_api.py</code> from a second terminal. It sends five requests: an order, a missing order, a refund, the same refund again, and a forced failure. Quick question before I explain: is the 404 a bug? <i>[Answer: no. The server answered: that order doesn't exist.]</i></p>
+    <p><i>[Do: on <code>/docs</code>: <code>GET /orders/{order_id}</code>, Try it out, <code>O-48291</code>, Execute. Then run <code>hello_api.py</code> and read the output aloud.]</i></p>
+  </aside>
 </section>
 
 <!-- 12 ─ idempotency -->
 <section class="slide">
-  <h2><span class="kicker">Step 02</span>Same key, same refund</h2>
-<pre><code>=== 3. Issue a refund
+  <h2><span class="kicker">Step 02</span>Sending the same refund twice pays out once</h2>
+<pre><code><span class="comment"># hello_api.py, blocks 3 and 4, trimmed. The key on the right is set in the code.</span>
+=== 3. Issue a refund
 POST http://localhost:9000/refunds        <span class="comment">Idempotency-Key: prep-kit-1f2a9c3e</span>
 -> status 200 OK      {"refund_id": "<span class="hl">R-26762c6f</span>", "amount_usd": 79.99}
 
 === 4. Retry with the SAME key
 POST http://localhost:9000/refunds        <span class="comment">Idempotency-Key: prep-kit-1f2a9c3e</span>
 -> status 200 OK      {"refund_id": "<span class="hl">R-26762c6f</span>", "amount_usd": 79.99}</code></pre>
-  <div class="callout analogy"><p>A receipt number on a bank transfer. Hand the clerk the same slip twice and you pay once, because they've already seen that number.</p></div>
-  <p class="small">The caller picks a unique key for "this one refund". A retry after a timeout reuses it, so the customer is refunded <strong>once</strong>. That's called <strong>idempotency</strong>.</p>
-  <aside class="notes">This is the one API idea worth naming today, because money is involved. Networks time out. If a refund request times out, you don't know if it happened, so you retry. Without a key, a retry can refund twice. With the key, the server recognises the request and returns the first refund. Session 5 builds the real refund tool on this. Don't go deeper today; the name and the picture are enough.</aside>
+  <div class="callout analogy"><p>A receipt number on a bank transfer: hand the clerk the same slip twice and you pay once.</p></div>
+  <p class="small">The caller picks one key for "this refund". A retry after a timeout reuses it, so the customer is refunded <strong>once</strong>. That's called <strong>idempotency</strong>.</p>
+  <aside class="notes">
+    <p>Look at blocks 3 and 4. Same refund request, sent twice, same refund ID back. Here's why that matters. Your code asks for a refund and the request times out. Did it happen or not? You don't know. So you retry. Without a key, that retry can refund the customer twice. With the same Idempotency-Key, the server recognises the slip and returns the first refund instead of making a new one.</p>
+    <p>It's like a receipt number on a bank transfer: hand the clerk the same slip twice and you pay once. The caller picks one key, then reuses it on every retry of the same refund. That's idempotency.</p>
+    <p><i>[If asked: Session 5 builds the real refund tool on this. Don't go deeper today.]</i></p>
+  </aside>
 </section>
 
 <!-- 13 ─ quick check 1 -->
 <section class="slide check">
-  <h2><span class="kicker">Quick check</span>APIs</h2>
+  <h2><span class="kicker">Quick check</span>APIs and venvs</h2>
   <ol>
-    <li>You ask for order O-00000 and get a <strong>404</strong>. Is the API broken?</li>
+    <li>You ask for order O-00000 and get a <strong>404</strong>. What is the 404 telling you?</li>
     <li>A refund request times out. Why is it safe to retry with the same <code>Idempotency-Key</code>?</li>
     <li>Your script prints <code>Virtual env : NO</code>. What did you forget?</li>
   </ol>
-  <aside class="notes">Answers. 1: No. The server answered correctly: that order doesn't exist. 404 is information, not a failure. 2: The server remembers the key. If the first request went through, it returns that same refund instead of making a second one; if it didn't, the retry does it. Either way the customer is refunded exactly once. 3: Activating the venv in this terminal (.venv\Scripts\activate, or source .venv/bin/activate).</aside>
+  <aside class="notes">
+    <p>Three quick ones; shout the answers out. First: you ask for order O-00000 and get a 404. What is the 404 telling you? <i>[Answer: that order doesn't exist. The server answered correctly; the API isn't broken.]</i> Second: a refund request times out. Why is it safe to retry with the same Idempotency-Key? <i>[Answer: the server remembers the key. If the first request went through, it returns that refund; if not, the retry does it. Refunded exactly once.]</i> Third: your script prints Virtual env NO. What did you forget? <i>[Answer: activating the venv in this terminal.]</i></p>
+    <p>The tempting mistake on the first one is treating anything that isn't 200 as an error. A 404 is information, not a failure: your code should read it and decide. On the third, the giveaway is that it worked a minute ago. A new terminal always starts without the venv.</p>
+  </aside>
 </section>
 
 <!-- 14 ─ secrets -->
@@ -244,13 +298,16 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
     </div>
     <div>
       <h3>The <code>.gitignore</code> file</h3>
-<pre><code><span class="comment"># Secrets</span>
-.env</code></pre>
+<pre><code>.env</code></pre>
       <p class="small">Git never sees <code>.env</code>, so you can't commit it by accident. The repo ships <code>.env.example</code> with the values empty.</p>
     </div>
   </div>
   <div class="callout watch"><p>Bots scan public GitHub for leaked keys within minutes. A key in your code is a key on the internet.</p></div>
-  <aside class="notes">An API key is your username and password in one string, attached to your credit card. Environment variables are named values the operating system hands to each program. Typing them every time is tedious, so projects keep them in a .env file, and a small package reads it. Show show_env.py: it reports which keys are set and how long they are, never the value, and warns about the two classic paste mistakes, a trailing space and quote marks.</aside>
+  <aside class="notes">
+    <p>Think of an API key: it's your username and password in one string, with your credit card attached. So it never goes in your code. It lives in a file called <code>.env</code>, one line per value, and <code>python-dotenv</code> reads that file when your program starts. Python then sees each line as an environment variable, which is a named value the operating system hands to each program.</p>
+    <p>The other half is <code>.gitignore</code>. It tells Git to never even look at <code>.env</code>, so you can't commit it by accident. The warning at the bottom is not an exaggeration: bots scan public GitHub for leaked keys within minutes.</p>
+    <p><i>[Do: show <code>show_env.py</code>: which keys are set and how long, never the value. It flags a trailing space and quote marks.]</i></p>
+  </aside>
 </section>
 
 <!-- 15 ─ four habits -->
@@ -263,15 +320,19 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
     <li>One key per project, so you can revoke one without breaking the others.</li>
   </ol>
   <div class="callout info"><p>Two <code>.env</code> files, on purpose: <code>prep-kit/.env</code> for free practice keys, <code>deskhand-workshop/.env</code> for the course key.</p></div>
-  <aside class="notes">The spending limit is the one to stress. A loop with a bug can make thousands of calls while you're at lunch; a limit turns that into an annoyance instead of a bill. And revoking is not a big deal: people leak keys all the time, and the fix is boring and fast. The two .env files keep practice and course separate, so nothing in the prep kit can change how the course code behaves.</aside>
+  <aside class="notes">
+    <p>Four habits, and the second is the one I'd nag you about. Set a monthly spending limit on the day you create a paid key. A loop with a bug can make thousands of calls while you're at lunch. A limit turns that into an annoyance instead of a bill. The first habit covers chats too: pasting one into an AI assistant counts as pasting it on the internet.</p>
+    <p>The third: leaked keys are common and revoking is fast, so just revoke and make a new one. The fourth, one key, one project, is what makes revoking painless.</p>
+    <p><i>[If asked: two <code>.env</code> files keep practice and course separate: <code>prep-kit/.env</code> for free practice keys, <code>deskhand-workshop/.env</code> for the course key.]</i></p>
+  </aside>
 </section>
 
 <!-- 16 ─ where LLMs came from -->
 <section class="slide">
-  <h2><span class="kicker">Extra reading</span>Where LLMs came from, in four steps</h2>
+  <h2><span class="kicker">Extra reading</span>Where LLMs (large language models) came from, in four steps</h2>
   <div class="cards">
     <div class="card">
-      <h4>Classic ML</h4>
+      <h4>Classic machine learning</h4>
       <p>A person picks the clues. The computer learns how much each counts.</p>
       <p class="muted">A spam filter counting "free".</p>
     </div>
@@ -291,8 +352,13 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
       <p class="muted">ChatGPT.</p>
     </div>
   </div>
-  <div class="callout plain"><p>Behind the API is a <strong>text predictor trained to be helpful</strong>. Session 1 starts from exactly that.</p></div>
-  <aside class="notes">This is background, moved here from Session 1 so that session can spend its time on the broken bot. Students don't need the history to build anything; skip the slide if time is short and point at prep-kit/extra-how-llms-work.md. ML means machine learning: the computer learns rules from examples instead of you writing them. The best example is instruction tuning: ask a raw model "What is your refund window?" and it may continue with "What is your shipping time? What is your warranty?", because it thinks it is in the middle of an FAQ page. An instruction-tuned model answers the question.</aside>
+  <div class="callout plain"><p>Behind the API is a model that <strong>predicts the next bit of text</strong>, trained to be helpful.</p></div>
+  <aside class="notes">
+    <p>Classic machine learning: a person picks the clues, like how often the word "free" appears, and the computer learns how much each clue counts. Deep learning: give it millions of examples and it finds the clues itself. Transformers, 2017: every word can look at every other word, so a model knows "them" means the headphones. Instruction tuning, around 2022: train it on questions and good answers.</p>
+    <p>That last step is the difference between a text predictor and ChatGPT. Ask a raw model for its refund window and it may carry on with the next question, as if it were on an FAQ page. An instruction-tuned model answers.</p>
+    <p><i>[Do: this is extra reading. Short on time? Skip it and point at <code>prep-kit/extra-how-llms-work.md</code>.]</i></p>
+    <p><i>[If asked: an LLM is a large language model. Session 1 starts from this idea, a text predictor trained to be helpful.]</i></p>
+  </aside>
 </section>
 
 <!-- 17 ─ what an LLM call is -->
@@ -308,16 +374,14 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
      "content": "Keep answers short."},
     {"role": "user",
      "content": "What is an API?"}
-  ],
-  "temperature": 0.2
+  ]
 }</code></pre>
     </div>
     <div>
       <h3>You get back</h3>
 <pre><code>{
   "choices": [{"message": {
-    "content": "A set of rules that
-     lets programs talk..."}}],
+    "content": "A set of rules that…"}}],
   "usage": {
     "prompt_tokens": 31,
     "completion_tokens": 24
@@ -325,8 +389,12 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
 }</code></pre>
     </div>
   </div>
-  <p class="small"><strong>system</strong> sets the rules · <strong>user</strong> asks · <strong>temperature</strong> is randomness (0 = steady) · <strong>usage</strong> is what you pay for</p>
-  <aside class="notes">Connect it back to step 02: a POST, JSON in, JSON out. The model field picks which model. Messages is the conversation so far: the system message sets the rules, the user message asks. Temperature controls randomness: near 0 you get the same answer most times, higher gives more variety. The response has the reply and a usage block with token counts, which is what the bill is based on. Tokens get their own step later.</aside>
+  <p class="small"><strong>system</strong> sets the rules · <strong>user</strong> asks · <strong>usage</strong>: how many tokens (chunks of text, step 06) went in and out. That's the bill.</p>
+  <aside class="notes">
+    <p>Here's the payoff from step 02. A call to a large language model, an LLM, is the same POST: JSON in, JSON out. On the left is what you send: a model name and a list of messages. The system message sets the rules, the user message asks the question.</p>
+    <p>On the right is what you get back. The reply is tucked inside <code>choices</code>, and then there's <code>usage</code>: two token counts, what you sent and what the model wrote. That's what the bill is based on. For now, a token is a chunk of text; step 06 shows exactly what that means.</p>
+    <p><i>[If asked: there's also a <code>temperature</code> setting. It's on the "Try it" slide, where you turn the dial yourself.]</i></p>
+  </aside>
 </section>
 
 <!-- 18 ─ one SDK three addresses -->
@@ -363,31 +431,46 @@ GEMINI_MODEL=gemini-3.5-flash-lite</code></pre>
     </g>
   </svg>
   </div>
-  <p class="small">A provider is <strong>an address plus a key</strong>. Change those two and the same code talks to a different company's model.</p>
-  <aside class="notes">This is the one idea to take from step 04. Most providers now offer an OpenAI-compatible API, meaning the same request shape OpenAI made popular. So the openai Python package talks to all of them; only base_url, the key and the model name change. In prep-kit/code/providers.py that's a three-row table. The Resolvo code does the same thing in a file called llm.py: one place knows about the provider and the rest of the program never does. They'll meet llm.py in Session 2.</aside>
+  <p class="small">A provider is <strong>an address plus a key</strong>. Change those two, pick one of that provider's model names, and the same code talks to a different company's model.</p>
+  <aside class="notes">
+    <p>This is the sentence I want you to leave with: a provider is an address plus a key. Here's why. Most providers copied OpenAI's request shape, so the one <code>openai</code> package can talk to all of them. Look at the diagram: <code>chat.py</code> hands the SDK a <code>base_url</code> and an <code>api_key</code>, and that's all that changes between Google's cloud, OpenRouter, and Ollama on your own laptop.</p>
+    <p>Swap the address, swap the key, pick one of that provider's model names, and the same code talks to a different company's model. That's how the course can let you bring your own provider.</p>
+    <p><i>[Do: open <code>prep-kit/code/providers.py</code>, a three-row table. Run <code>chat.py</code> with two <code>--provider</code> values: only the bracket line changes.]</i></p>
+  </aside>
 </section>
 
 <!-- 19 ─ the code -->
 <section class="slide">
   <h2><span class="kicker">Step 04</span>All the code it takes</h2>
-<pre><code>from openai import OpenAI
+<pre><code>import os
+from dotenv import load_dotenv
+from openai import OpenAI
 
+<span class="comment"># 1 · the address and the key (load_dotenv reads .env, as on the secrets slide)</span>
+load_dotenv()
+key = os.environ["OPENROUTER_API_KEY"]
 client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
 
+<span class="comment"># 2 · one call: a model name and the messages</span>
 response = client.chat.completions.create(
     model="openrouter/free",
     messages=[{"role": "system", "content": "Keep answers short."},
               {"role": "user", "content": "Explain an API in one sentence."}],
 )
+<span class="comment"># 3 · the reply, and the two token counts</span>
 print(response.choices[0].message.content)
 print(response.usage.prompt_tokens, response.usage.completion_tokens)</code></pre>
-  <p class="small">The kit wraps this in <code>code/chat.py</code> with a <code>--provider</code> switch and friendly error messages.</p>
-  <aside class="notes">Read it line by line: make a client pointed at an address with a key, send a model name and messages, print the reply and the two token counts. That's it. Everything clever in the next four weeks happens around this call, not inside it. chat.py adds a timer and turns the usual errors (missing key, 401, 429, 404) into a sentence with a fix.</aside>
+  <p class="small">A minimal version to read, not a file in the kit. The kit's <code>code/chat.py</code> does the same, with a <code>--provider</code> switch and friendly error messages.</p>
+  <aside class="notes">
+    <p>Here's all the code it takes; follow the numbered comments. One: a client, which is an address and a key. The key comes from <code>.env</code>, the way the secrets slide showed. Two: one call, with a model name and a list of messages, the system rule and the user question. Three: you print the reply, and two token counts. That's it.</p>
+    <p>Everything clever in the next four weeks happens around this call, not inside it: what goes into the messages, what you do with the reply, and how you check it. The kit wraps this in <code>chat.py</code> so you get a provider switch and readable error messages.</p>
+    <p><i>[If asked: <code>chat.py</code> adds a timer and turns the usual errors (missing key, 401, 429, 404) into a sentence with a fix.]</i></p>
+  </aside>
 </section>
 
 <!-- 20 ─ three providers -->
 <section class="slide">
-  <h2><span class="kicker">Step 04 and 05</span>Three free ways to practise</h2>
+  <h2><span class="kicker">Steps 04 and 05</span>Three free ways to practise</h2>
   <div class="cards">
     <div class="card">
       <h4>Gemini</h4>
@@ -405,8 +488,11 @@ print(response.usage.prompt_tokens, response.usage.completion_tokens)</code></pr
       <p class="small">Much weaker than the cloud models, and slower on old laptops.</p>
     </div>
   </div>
-  <div class="callout watch"><p>These are for practice. The course code needs OpenAI, Azure or Anthropic (step 08).</p></div>
-  <aside class="notes">Go through each card. Gemini is the easiest start, but warn about the free-tier data rule: never send anything personal or from work. OpenRouter is useful because it shows how many models exist; the model name in chat.py's output changes as openrouter/free picks different ones. Ollama is the one that makes "a model is a file of numbers" concrete. Then the warning: none of these three is wired into the course checkpoints.</aside>
+  <div class="callout watch"><p>These are for practice. The course needs a paid OpenAI or Azure OpenAI key (step 08).</p></div>
+  <aside class="notes">
+    <p>Three free ways to practise, and none of them is wired into the course code; the course needs a paid key, which is step 08. Gemini is the easiest: keys come from <code>aistudio.google.com/apikey</code>, no card needed. One warning: on the free tier, Google may use what you send, so practise only on the Nimbus tickets. Never send anything personal or from work.</p>
+    <p>OpenRouter is one key, hundreds of models. Watch the model name in the output change as <code>openrouter/free</code> picks a different one. Ollama runs on your laptop, no key. It's much weaker, but it shows you that a model is just a file of numbers you can download.</p>
+  </aside>
 </section>
 
 <!-- 21 ─ lab: first call -->
@@ -415,19 +501,24 @@ print(response.usage.prompt_tokens, response.usage.completion_tokens)</code></pr
 <pre><code>py code\show_env.py                  <span class="comment"># are the keys set? (never prints them)</span>
 py code\chat.py --provider gemini "Explain what an API is in one sentence."
 py code\chat.py --provider openrouter "Explain what an API is in one sentence."
-py code\chat.py --provider ollama "Explain what an API is in one sentence."
+py code\chat.py --provider ollama "Explain what an API is in one sentence."   <span class="comment"># after step 05</span>
 
 An API is a set of rules that lets different programs talk to each other.
 
 [gemini | gemini-3.5-flash-lite | 31 tokens in, 24 out | 870 ms]</code></pre>
-  <p>Then: the same joke at <code>--temperature 0</code> three times, and at <code>1.5</code> three times.</p>
-  <aside class="notes">The bracket line is the thing to point at: which model answered, tokens in, tokens out, milliseconds. Those four numbers come back in every session. The exact numbers on the slide are an example; theirs will differ. The temperature exercise shows randomness directly. If someone gets 429, that's the free tier: wait a minute. If they get 401, show_env.py will usually spot a stray space or quote mark.</aside>
+  <p><strong>Temperature</strong> is a randomness dial: near 0 you get the same answer most times, higher gives variety. Run this three times, then three times with <code>--temperature 0</code>:</p>
+<pre><code>py code\chat.py --provider gemini --temperature 1.5 "Tell me a one-line joke about printers."</code></pre>
+  <aside class="notes">
+    <p>Time for your first calls. Start with <code>show_env.py</code>: it tells you which keys are set without ever printing them. Then run <code>chat.py</code> with whichever provider you've set up. Everyone should get one working call. Now look at the bracket line under the answer: the model, tokens in, tokens out, milliseconds. Those four numbers come back every session, so get used to reading them. Yours will differ from the slide.</p>
+    <p>Then the second half: temperature, a randomness dial. Ask for the same printer joke three times at 1.5, then three times at 0. High gives you a different joke most runs; near 0, mostly the same one.</p>
+    <p><i>[Watch out: 429 is the free tier: wait a minute. 401: <code>show_env.py</code> usually spots a stray space or quote mark. The Ollama line needs step 05 first.]</i></p>
+  </aside>
 </section>
 
 <!-- 22 ─ local models -->
 <section class="slide">
   <h2><span class="kicker">Step 05</span>A model on your own laptop</h2>
-<pre><code>ollama pull llama3.2          <span class="comment"># about 2 GB, 3 billion parameters</span>
+<pre><code>ollama pull llama3.2          <span class="comment"># about 2 GB, 3 billion parameters (the numbers the model is made of)</span>
 py code\chat.py --provider ollama "Say hello in five words."</code></pre>
   <table>
     <tr><th>Your laptop has</th><th>Try</th></tr>
@@ -435,21 +526,31 @@ py code\chat.py --provider ollama "Say hello in five words."</code></pre>
     <tr><td>16 GB or more</td><td>also <code>gemma3:4b</code> (3.3 GB), and compare</td></tr>
   </table>
   <div class="callout watch" data-label="If Ollama crashes (500, often mentioning CUDA)"><p>The graphics driver is the usual cause. Quit Ollama, then run it on the CPU: <code>$env:CUDA_VISIBLE_DEVICES="-1"; ollama serve</code></p></div>
-  <aside class="notes">The first call is slow, 10 to 20 seconds, because the model loads into memory; later calls are much faster. Then the party trick: turn off Wi-Fi and run it again. It still works. The crash on the slide is real: we hit it on a Windows laptop while building this kit, and running on the CPU fixed it. If a laptop can't run a model at all, that's fine; Gemini and OpenRouter cover everything else.</aside>
+  <aside class="notes">
+    <p>Now the model on your own laptop. <code>ollama pull</code> downloads <code>llama3.2</code>, about 2 gigabytes, 3 billion parameters. Those parameters are the numbers the model is made of, and that's the whole download. Then the same <code>chat.py</code>, just a different provider. Before I run it, a warning: the first call after a restart takes 10 to 20 seconds while the model loads, so the silence isn't a failure.</p>
+    <p>Now I'll turn off Wi-Fi and run it again. It still works. The table tells you which model fits your memory: with 8 gigabytes stick to <code>llama3.2</code>; with 16 or more, try <code>gemma3:4b</code> too and compare.</p>
+    <p><i>[Do: turn off Wi-Fi on screen and run the call again.]</i></p>
+    <p><i>[Watch out: the CUDA crash is real; the CPU fix on the slide works. No model runs at all? Fine: Gemini and OpenRouter cover the rest.]</i></p>
+  </aside>
 </section>
 
 <!-- 23 ─ tokens -->
 <section class="slide">
   <h2><span class="kicker">Step 06</span>Models read tokens, not words</h2>
-<pre><code>py code\count_tokens.py
+<pre><code>py code\count_tokens.py          <span class="comment"># output trimmed</span>
 
 Ticket T-1001: 217 characters, 40 words, 47 tokens
 
+The first 20 tokens, as the model sees them:
 'I' | ' ordered' | ' the' | ' wireless' | ' headphones' | ' two' | ' weeks' |
 ' ago' | ',' | ' order' | ' #' | '<span class="hl">482</span>' | '<span class="hl">91</span>' | '.' | ' They' | ' arrived' | ...</code></pre>
-  <div class="callout plain"><p>A <strong>token</strong> is a chunk of text: often a short word, sometimes part of a word or a number. English is about 3 tokens per 4 words.</p></div>
+  <div class="callout plain"><p>A <strong>token</strong> is a chunk of text: often a short word, sometimes part of a word or a number. English is about 4 tokens per 3 words.</p></div>
   <p class="small">The order number <code>48291</code> became two tokens. The model never sees it as one thing.</p>
-  <aside class="notes">This runs offline, nothing is sent. Before a model sees text, a tokenizer cuts it into chunks and turns each into a number. Point at 482 and 91: that's part of why models sometimes garble long numbers when they copy them. Other languages, Arabic included, usually take more tokens for the same meaning, so they cost more. Session 1 goes much deeper on this.</aside>
+  <aside class="notes">
+    <p>Here's what a token is. Models don't read words; they read tokens. A tokenizer cuts text into chunks and turns each chunk into a number, and the model only ever sees those numbers. Often a chunk is a short word with its leading space, sometimes it's part of a word or a number. Ticket T-1001 is 40 words but 47 tokens.</p>
+    <p>Now look at the highlighted bit: the order number 48291 became two tokens, 482 and 91. The model never sees that number as one thing. That's part of why models sometimes garble long numbers when copying them. Keep that in mind every time Deskhand handles an order ID.</p>
+    <p><i>[If asked: <code>count_tokens.py</code> runs offline; nothing is sent. Session 1 goes deeper.]</i></p>
+  </aside>
 </section>
 
 <!-- 24 ─ tokens and Arabic -->
@@ -463,7 +564,11 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
   </table>
   <p>The tokenizer learned mostly from English, so other languages get cut into more pieces. <code>refund</code> is 1 token; استرداد is 3.</p>
   <div class="callout info"><p>Try yours: <code>py code\count_tokens.py --text "your sentence"</code></p></div>
-  <aside class="notes">Moved here from Session 1. Ask who has built a product for Arabic-speaking users. English: 7 words, 7 tokens. Modern Standard Arabic: 4 words, 10 tokens. Lebanese dialect: 3 words, 7 tokens. So an Arabic ticket costs more, takes a little longer, and fills more of the model's space for that call. Estimate costs with your real customers' language, not English test data. Counts are from the GPT-4o tokenizer (o200k_base); other providers' tokenizers differ, and the gap has narrowed but not closed.</aside>
+  <aside class="notes">
+    <p>Same request, three languages, three prices. The English sentence is 7 words and 7 tokens. The formal Arabic is 4 words but 10 tokens. The shorter, informal one is 3 words and 7 tokens. The reason is that the tokenizer learned mostly from English, so English words tend to be one token each, while other languages get cut into more pieces. Refund is one token; استرداد is three.</p>
+    <p>More tokens means more cost and a little more time per call. So if you build for Arabic-speaking users, estimate your costs with your real customers' language, not English test data. Who here has built a product for Arabic-speaking users?</p>
+    <p><i>[If asked: counts are from the GPT-4o tokenizer (o200k_base). Other tokenizers differ; the gap has narrowed but not closed.]</i></p>
+  </aside>
 </section>
 
 <!-- 25 ─ cost -->
@@ -478,26 +583,33 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
   </table>
   <ul>
     <li>Priced per million tokens. <strong>Output</strong> costs more than input.</li>
-    <li>One call is a fraction of a cent. The choice of model is a <strong>16×</strong> difference in the bill.</li>
+    <li>One call is a fraction of a cent. The choice of model is a <strong>17×</strong> difference in the bill.</li>
   </ul>
   <p class="small muted">Prices checked October 2026. They change: always check the provider's pricing page.</p>
-  <aside class="notes">The arithmetic is input tokens times input price plus output tokens times output price, divided by a million. count_tokens.py does it for them. The point isn't the exact figures; it's that the model choice dominates the bill, and the reply usually costs more than the question. compare.py then sends one ticket to every provider they've set up and prints the time each took. Times change from run to run, which is why Session 1 measures speed over many calls.</aside>
+  <aside class="notes">
+    <p>Let's put a price on one ticket. Read T-1001, 47 tokens, and write a 150-token reply. The sum is simple: input tokens times the input price, plus output tokens times the output price, divided by a million, because prices are quoted per million tokens. <code>count_tokens.py</code> does that sum for you.</p>
+    <p>Two things to notice. One call is a fraction of a cent, so a single ticket never matters. What does matter is the model: 97 cents for ten thousand tickets on <code>gpt-4o-mini</code>, $16.18 on <code>gpt-4o</code>, a 17 times difference. And output costs more than input, so the reply usually costs more than the question.</p>
+    <p><i>[If asked: <code>compare.py</code> times one ticket on every provider they've set up. Times vary run to run; Session 1 measures over many calls.]</i></p>
+  </aside>
 </section>
 
 <!-- 26 ─ quick check 2 -->
 <section class="slide check">
   <h2><span class="kicker">Quick check</span>Keys, providers, tokens</h2>
   <ol>
-    <li>To switch <code>chat.py</code> from Gemini to OpenRouter, which <strong>two</strong> things change?</li>
+    <li>To switch <code>chat.py</code> from Gemini to OpenRouter, which <strong>three</strong> things change?</li>
     <li>You pushed a key to GitHub by mistake. What do you do first?</li>
     <li>Which costs more per token: what you send, or what the model writes?</li>
   </ol>
-  <aside class="notes">Answers. 1: The address (base_url) and the key, plus the model name, which is just a string. The code that builds the request stays the same. 2: Revoke the key in the provider's dashboard right away, then make a new one. Deleting the commit isn't enough: the key is already out. 3: What the model writes (output). For gpt-4o-mini it's four times the input price.</aside>
+  <aside class="notes">
+    <p>Three more. First: to switch <code>chat.py</code> from Gemini to OpenRouter, which three things change? <i>[Answer: the address (<code>base_url</code>), the API key, and the model name. The request code stays the same.]</i> Second: one of your keys ends up on GitHub by mistake. What do you do first? <i>[Answer: revoke it in the provider's dashboard right away, then make a new one.]</i> Third: which costs more per token, what you send or what the model writes? <i>[Answer: what the model writes. For <code>gpt-4o-mini</code>, four times the input price.]</i></p>
+    <p>On the second one, the tempting answer is to delete the commit. That isn't enough: the bots already have it. Revoke first, tidy up after. On the third, remember that the reply usually costs more than the question.</p>
+  </aside>
 </section>
 
-<!-- 27 ─ taste of resolvo -->
+<!-- 27 ─ taste of the course (kit step 07) -->
 <section class="slide">
-  <h2><span class="kicker">Step 07</span>A taste of Resolvo: the model suggests, your code decides</h2>
+  <h2><span class="kicker">Step 07</span>Sorting real tickets: the model suggests, your code decides</h2>
 <pre><code>py code\taste_of_resolvo.py --provider gemini
 
 --- T-1002: Hi, checking on order O-58204 (SoundBar Mini). It says shipped...
@@ -508,7 +620,11 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
     <div class="card"><h4>3. Allowed values?</h4><p>Every field from the list.</p></div>
   </div>
   <p class="small">Anything that fails is printed as <code>REJECTED</code> with the raw reply. It is never used.</p>
-  <aside class="notes">This is a small version of checkpoint 01, with the same labels: category, priority, sentiment. The prompt says "reply with ONLY a JSON object", and models still say "Sure! Here's the JSON", wrap it in a code fence, or invent a category. parse_reply in the script checks every reply. The sentence to leave them with is the title: the model suggests, your code decides. That rule runs through the whole course, especially for refunds.</aside>
+  <aside class="notes">
+    <p>This is the rule the whole course runs on: the model suggests, your code decides. <code>taste_of_resolvo.py</code> asks a model to sort real tickets into a category, priority and sentiment, and asks for only a JSON object back. Then the code checks the reply three ways before trusting it. Is it valid JSON? Models still say "Sure! Here's the JSON", or wrap it in a code fence. Is it an object, not a list or a string? And is every value from the allowed list? Models invent categories.</p>
+    <p>Anything that fails is printed as <code>REJECTED</code>, and it's never used. That matters most later, when the action is a refund.</p>
+    <p><i>[If asked: it's a small version of checkpoint 01, with the same labels. The file name uses Resolvo, Deskhand's earlier name.]</i></p>
+  </aside>
 </section>
 
 <!-- 28 ─ two kinds of wrong -->
@@ -519,15 +635,19 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
     <div class="card bad">
       <h4>Wrong shape</h4>
       <p>Not JSON, or a value off the list. Code catches it every time.</p>
-      <p class="small">Session 2 makes it nearly impossible.</p>
+      <p class="small">Your code can check this.</p>
     </div>
     <div class="card bad">
       <h4>Wrong answer</h4>
-      <p>Perfect JSON, wrong label. Nothing is broken: it's a duplicate gift.</p>
-      <p class="small">Session 10: test against tickets with known answers.</p>
+      <p>Perfect JSON, wrong label. The speaker isn't faulty: it's a duplicate gift.</p>
+      <p class="small">No check on one reply can catch this.</p>
     </div>
   </div>
-  <aside class="notes">This is a real run from building the kit. The reply passed every check: valid JSON, allowed values. And it's wrong. Nothing is defective, the customer got a duplicate gift and wants to return it. Code can't see that by looking at one reply. You find it by running many tickets where you already know the right answer, which is what evaluation in Session 10 is. Session 2 deals with the first kind using structured outputs.</aside>
+  <aside class="notes">
+    <p>This is the most important slide of the second half, and it's a real run from building the kit. Read the ticket: a customer got a Nimbus smart speaker as a gift and already owns one. Nothing is defective. They want to return a duplicate gift. <code>llama3.2</code> said <code>product_defect</code>, and that reply passed every check: valid JSON, an object, a label from the list.</p>
+    <p>So there are two kinds of wrong. Wrong shape, which your code catches every time. And wrong answer: perfect JSON, wrong label. Looking at this one reply, nothing tells you it's wrong. So how would you ever find out? <i>[Answer: run many tickets whose right answer you already know, and count the matches. "A person checks them" is a fair first answer.]</i></p>
+    <p><i>[If asked: Session 2 makes wrong shapes nearly impossible. Session 10 is the known-answers testing, called evaluation.]</i></p>
+  </aside>
 </section>
 
 <!-- 29 ─ your course key -->
@@ -537,15 +657,20 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
     <tr><th>Provider</th><th>Whole course?</th><th>Notes</th></tr>
     <tr><td><strong>OpenAI</strong> (recommended)</td><td class="good">Yes</td><td>One key covers everything, embeddings included</td></tr>
     <tr><td>Azure OpenAI</td><td class="good">Yes</td><td>If your employer already gives you Azure</td></tr>
-    <tr><td>Anthropic</td><td class="warn">Not alone</td><td>Session 1 and the RAG weeks also need an OpenAI key</td></tr>
+    <tr><td>Anthropic</td><td class="warn">Not alone</td><td>Some course code only speaks OpenAI or Azure, so you'd need an OpenAI key as well</td></tr>
   </table>
   <ol>
     <li><code>platform.openai.com</code> → Billing: add <strong>$10</strong> prepaid credit.</li>
     <li>Limits: set a monthly budget.</li>
-    <li>API keys: create one called <code>resolvo</code>. You only see it once.</li>
+    <li>API keys: create one called <code>resolvo</code> (the kit's name for it). You only see it once.</li>
   </ol>
   <p class="small muted">ChatGPT Plus and Claude Pro don't include API access. They're separate products.</p>
-  <aside class="notes">This is the must-do. $10 is plenty: on the default small model a typical lab run costs cents, and the slides warn them before anything costs more. Azure works if their company already has it; the common trap is the deployment name versus the model name. Anthropic works from checkpoint 01, but Session 1's bot only speaks OpenAI or Azure and Anthropic has no embeddings API, so they'd need an OpenAI key too. Embeddings are week 3; they don't need to know what they are yet.</aside>
+  <aside class="notes">
+    <p>Now the must-do: a paid course key, with $10 of credit and a monthly budget. OpenAI is the recommendation: one key, everything covered, embeddings included, for week 3. Azure works if your employer gives it to you. Anthropic alone doesn't, because Session 1's bot only speaks OpenAI or Azure, and Anthropic has no embeddings API.</p>
+    <p>The three steps are on the slide: add $10 prepaid, set a monthly budget, create one API key, named <code>resolvo</code>, as step 08 says. You only see it once, so paste it into <code>.env</code>. And $10 is plenty: on the default small model an evening's steps cost cents, and the slides warn you before anything costs more.</p>
+    <p><i>[Watch out: Azure: deployment name, not model name.]</i></p>
+    <p><i>[If asked: ChatGPT Plus and Claude Pro don't include API access. They're separate products.]</i></p>
+  </aside>
 </section>
 
 <!-- 30 ─ fill env, install, doctor -->
@@ -554,18 +679,24 @@ Ticket T-1001: 217 characters, 40 words, 47 tokens
 <pre><code><span class="comment"># from the folder that holds prep-kit</span>
 git clone https://github.com/hasankanaan26/deskhand-workshop.git
 cd deskhand-workshop
-deactivate; py -3.12 -m venv .venv; .venv\Scripts\activate   <span class="comment"># the course's own venv</span>
+deactivate                          <span class="comment"># only if your prompt starts with (.venv)</span>
+py -3.12 -m venv .venv; .venv\Scripts\activate   <span class="comment"># the course's own venv</span>
 pip install -r requirements.txt     <span class="comment"># the full course list: 10 to 20 minutes</span>
 copy .env.example .env              <span class="comment"># then set LLM_PROVIDER=openai and OPENAI_API_KEY=</span>
-python ..\prep-kit\code\check_setup.py --live
+python ..\prep-kit\code\check_setup.py --live      <span class="comment"># output trimmed</span>
 
 [ ok ] Course repo found: C:\...\deskhand-workshop
 [ ok ] The course's virtual environment is active
 [ ok ] Course provider: openai (key filled in)
+[warn] Mock order API not running (fine for now)
 [ ok ] Live call to openai (gpt-4o-mini) answered: 'ready'
 
 Ready for Day 1. See you on Monday.</code></pre>
-  <aside class="notes">This is where students leave the kit: they clone the course repo next to it and give it its own venv. The check runs from inside the course folder with the course venv active; if they forget to switch, it says "This is the prep kit's venv" and how to fix it. The template starts with LLM_PROVIDER=azure, so the most common slip is filling in the OpenAI key and leaving that line alone; the setup check spots it and says which line to change. The check never prints a key, it only looks at which settings are filled in. --live makes one tiny real call, a fraction of a cent. Warn lines are fine; only FAIL lines need fixing, and each one prints what to do.</aside>
+  <aside class="notes">
+    <p>The last step, and the one that takes longest. Clone the course repo next to the kit, not inside it. Give it its own venv: if the kit's one is still active, deactivate it first, then make and activate a new one. The install is the full course list, so expect 10 to 20 minutes; start it and let it run. Copy <code>.env.example</code> to <code>.env</code>, set <code>LLM_PROVIDER=openai</code>, and paste in your key. Then run <code>check_setup.py --live</code> and keep going until it says Ready. Warn lines are fine. Only FAIL lines need fixing, and each one prints what to do.</p>
+    <p><i>[Watch out: the template starts with <code>LLM_PROVIDER=azure</code>. Students fill in the OpenAI key, then miss that line. The check names it.]</i></p>
+    <p><i>[If asked: <code>--live</code> makes one tiny real call, a fraction of a cent.]</i></p>
+  </aside>
 </section>
 
 <!-- 31 ─ checklist -->
@@ -582,15 +713,22 @@ Ready for Day 1. See you on Monday.</code></pre>
     <li><code>git pull</code> the morning of Session 1</li>
   </ol>
   <p class="small">Stuck on the last check? Come 20 minutes early on Monday with its output. We'll fix it together.</p>
-  <aside class="notes">Leave this up at the end of the call. The order matters less than the last two items. Anything they don't finish today, they can finish this weekend from the step pages. You won't need Docker. If they already use an AI coding assistant, they should bring it; if not, they install a free one before Session 3 (step 08 of the kit says how), because that session's lab needs it from the first minute.</aside>
+  <aside class="notes">
+    <p>Here's the checklist for Monday. Most of it you've seen today. The last two items matter most: the setup check says Ready, and <code>git pull</code> on the morning of Session 1, so you start with the latest code. If you're stuck on the check, don't lose your weekend to it. Come 20 minutes early on Monday with the output and we'll fix it together. Everything else on this list is a bonus.</p>
+    <p><i>[Do: leave this up at the end of the call.]</i></p>
+    <p><i>[If asked: no Docker needed. In Session 3 you watch me use an AI coding assistant; you need your own that evening to repeat it. The kit's step 08 says how to install a free one.]</i></p>
+  </aside>
 </section>
 
 <!-- 32 ─ close -->
 <section class="slide lead">
   <h1>See you on Monday</h1>
-  <p class="subtitle">Session 1: What Changed, and What Didn't. Bring the laptop that passed the check.</p>
+  <p class="subtitle">Session 1: What Changed, and What Didn't. In class you watch; in the evenings you run it yourself.</p>
   <p class="session-meta">Monday, October 19, 2026 · prep-kit/README.md has everything from today</p>
-  <aside class="notes">Thank them. Remind them where the kit lives and that the README has the checklist. Questions for five minutes, then stay on the call for anyone whose setup check still fails.</aside>
+  <aside class="notes">
+    <p>That's it for today. Thank you for giving up part of your weekend. Everything from today is in the kit's README, checklist included, so you don't need to take notes. Session 1 is "What Changed, and What Didn't". In class you watch and vote; in the evenings you run the same thing on the laptop that passed the check. See you on Monday.</p>
+    <p><i>[Do: five minutes of questions, then stay on the call for anyone whose setup check still fails.]</i></p>
+  </aside>
 </section>
 
 </main>
